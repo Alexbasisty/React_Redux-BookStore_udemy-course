@@ -1,5 +1,5 @@
 
-# Raact Redux Udemy coure
+# React Redux Udemy course
 
 ### Tworzenie prostej aplikacji
 
