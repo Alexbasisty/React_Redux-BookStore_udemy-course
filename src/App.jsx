@@ -20,7 +20,7 @@ const App = () => {
     <React.StrictMode>
       <div id="created-by-react">
         <h1>React BoookStore</h1>
-        <Add />
+        <Add books={books} setBooks={setBooks} />
         <Inventory books={books} />
       </div>
     </React.StrictMode>

@@ -15,7 +15,7 @@ const useDropdown = (defaultState, label, options) => {
           onBlur={(e) => setState(e.target.value)}
           onChange={(e) => setState(e.target.value)}
         >
-          <option>Dowolna</option>
+          <option>Dowolny</option>
           {options.map((option, index) => (
             <option key={index} value={option}>
               {option}
