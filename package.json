@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier \"src/**/*.{js,html}\" --write",
-    "lint": "eslint \"src/**/*.{js,html,jsx}\""
+    "lint": "eslint \"src/**/*.{js,html,jsx}\"",
+    "dev": "parcel src/index.html"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,9 @@
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-react": "^7.19.0",
     "prettier": "^2.0.4"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }

@@ -1,4 +1,5 @@
-import React from "react";
+// import React from "react";
+// import ReactDOM from "react-dom";
 
 const App = () => {
   return React.createElement(
@@ -11,7 +12,7 @@ const App = () => {
       React.createElement(
         Book,
         {
-          title: "Straż! Straż",
+          title: "Straż! Straż!",
           author: "Terry Prachett",
           publicationDate: "1989",
         },
