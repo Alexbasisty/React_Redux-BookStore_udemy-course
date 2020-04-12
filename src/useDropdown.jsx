@@ -16,9 +16,9 @@ const useDropdown = (defaultState, label, options) => {
           onChange={(e) => setState(e.target.value)}
         >
           <option>Dowolna</option>
-          {options.map((genre, index) => (
-            <option key={index} value={state}>
-              {state}
+          {options.map((option, index) => (
+            <option key={index} value={option}>
+              {option}
             </option>
           ))}
         </select>
