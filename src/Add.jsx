@@ -1,16 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useDropdown from "./useDropdown.jsx";
 
 export const Add = () => {
   const [author, setAuthor] = useState("");
-  //   const [genre, setGenre] = useState("");
-  //   const [audience, setAudience] = useState("");
+  const [books, setBooks] = useState([]);
 
   const genres = ["Fantastyka", "Horror", "Kryminał"];
   const audiences = ["Dzieci", "Młodież", "Dorośli"];
 
   const [genre, GenreDropdown] = useDropdown("", "Gatunek", genres);
   const [audience, AudienceDropdown] = useDropdown("", "Dla", audiences);
+
+  useEffect(() => {
+    fetch("https://clockworkjava.pl/books.php")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setBooks(data);
+      });
+  }, []);
 
   return (
     <div>
