@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
+import { Router } from "@reach/router";
 import { Add } from "./Add.jsx";
 import { Inventory } from "./Inventory.jsx";
 
@@ -20,8 +21,10 @@ const App = () => {
     <React.StrictMode>
       <div id="created-by-react">
         <h1>React BoookStore</h1>
-        <Add books={books} setBooks={setBooks} />
-        <Inventory books={books} />
+        <Router>
+          <Add books={books} setBooks={setBooks} />
+          <Inventory books={books} />
+        </Router>
       </div>
     </React.StrictMode>
   );
