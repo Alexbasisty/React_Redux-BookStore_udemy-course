@@ -1,9 +1,16 @@
 import React from "react";
 
 export class InputComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            id: `component-input-${this.props.label}`,
+        };
+    }
+
     render() {
         const { label, state, setState, type = "text" } = this.props;
-        const id = `component-input-${label}`;
+        const { id } = this.state;
         return (
             <label htmlFor={id}>
                 {label}
