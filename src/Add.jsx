@@ -5,6 +5,7 @@ export const Add = ({ books, setBooks }) => {
     const [author, setAuthor] = useState("");
     const [title, setTitle] = useState("");
     const [publicationDate, setPublicationDate] = useState("");
+
     const genres = ["Fantastyka", "Horror", "Kryminał"];
     const audiences = ["Dzieci", "Młodież", "Dorośli"];
 
