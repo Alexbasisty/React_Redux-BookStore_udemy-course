@@ -28,7 +28,7 @@ export const App = () => {
                     <h1>React BoookStore</h1>
                 </Link>
                 <Router>
-                    <Add books={books} setBooks={() => {}} path="/admin" />
+                    <Add path="/admin" />
                     <Inventory books={books} path="/" />
                 </Router>
             </div>
