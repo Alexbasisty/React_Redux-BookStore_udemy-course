@@ -1,16 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 
-export class InputComponennts extends Component {
+export class InputComponent extends React.Component {
     render() {
+        const { label, state, setState, type = "text" } = this.props;
+        const id = `component-input-${label}`;
         return (
-            <label htmlFor="author">
-                Autor
+            <label htmlFor={id}>
+                {label}
                 <input
-                    id="author"
-                    value={author}
-                    placeholder="Autor"
+                    id={id}
+                    type={type}
+                    value={state}
+                    placeholder={label}
                     onChange={(event) => {
-                        setAuthor(event.target.value);
+                        setState(event.target.value);
                     }}
                 />
             </label>
