@@ -3,9 +3,11 @@ import { useDispatch } from "react-redux";
 import { Router, Link } from "@reach/router";
 import { Add } from "./Add.jsx";
 import { Inventory } from "./Inventory.jsx";
+import { ADD_BOOK } from "./store/reducer.js";
 
 export const App = () => {
     const [books, setBooks] = useState([]);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         fetch("https://clockworkjava.pl/books.php")
@@ -13,7 +15,9 @@ export const App = () => {
                 return response.json();
             })
             .then((data) => {
-                setBooks(data);
+                data.forEach((book) => {
+                    dispatch({ type: ADD_BOOK, payload: book });
+                });
             });
     }, []);
 
